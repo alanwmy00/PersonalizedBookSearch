@@ -1,0 +1,8 @@
+scikit-surprise
+pandas
+numpy
+scikit-learn
+re
+unidecode
+pickle
+sentence-transformers
