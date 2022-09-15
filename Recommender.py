@@ -4,7 +4,6 @@ import pandas as pd
 import surprise
 from surprise import Dataset, Reader, SVD
 
-
 MODEL_NAME = "Surprise_SVD"
 
 
@@ -14,13 +13,12 @@ class Recommender:
     @author: Minyang Wang
     @date: 9/14/2022
     """
-    
+
     def __init__(self):
         """
         Initialize a SVD model
         """
         self.model = SVD()
-
 
     def fit(self, train_X, train_y):
         """
@@ -35,7 +33,6 @@ class Recommender:
         train["rating"] = train_y
         data = Dataset.load_from_df(train, reader)
         self.model.fit(data.build_full_trainset())
-
 
     def predict(self, X):
         """
@@ -53,7 +50,6 @@ class Recommender:
         temp2 = pd.merge(test, predictions, left_on=['u', 'i'], right_on=['uid', 'iid'], how="left")
         return np.array(temp2.est).reshape(-1, 1)
 
-
     def save(self, model_path):
         """
         Save to local
@@ -61,7 +57,6 @@ class Recommender:
             model_path: path to write to
         """
         surprise.dump.dump(os.path.join(model_path, "model.save"), predictions=None, algo=self.model, verbose=1)
-
 
     @classmethod
     def load(cls, model_path):

@@ -1,8 +1,6 @@
-scikit-surprise
-pandas
-numpy
-scikit-learn
-re
-unidecode
-pickle
-sentence-transformers
+scikit-surprise~=1.1.2
+pandas~=1.4.4
+numpy~=1.23.3
+regex~=2022.9.13
+unidecode~=1.3.4
+sentence-transformers~=2.2.2
