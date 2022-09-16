@@ -13,3 +13,4 @@ query = "i love you"
 
 if __name__ == "__main__":
     res = search_eng.query(user_id=user_id, text=query, K=20, save_res=True)
+    print(res)
