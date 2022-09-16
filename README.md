@@ -93,9 +93,9 @@ Therefore, we define
 
 $$\text{Click Score for a Query j} = C_{j} :=
 \begin{cases}
-      {\frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1} } & m > 0\text{ clicks have been made for this query j}\\
+      {\frac{1}{m} {\Sigma_{i=1}^{m}} {(i \cdot p_i)}^{-1} } & m > 0\text{ clicks have been made for this query j}\\
       0 & \text{no click has been made}
-    \end{cases}     $$
+    \end{cases}$$
 
 where $p_i$ is the index (1-based) of the result of click $i$.
 We also define
