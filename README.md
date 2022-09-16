@@ -77,7 +77,7 @@ From the previous 4 parts, we get 4 values: `rating`, `sentence similarity score
 When a user performs a search, we ask the user to give feedback on which of the top 10 results meet their expetaction. 
 
 We can define 
-$$\text{Precision at } k = P_k := \frac{\text{\# of results that meet expetaction from result 1 to k}}{k}$$
+$$\text{Precision @} k = P_k := \frac{\text{number of results that meet expetaction from result 1 to k}}{k}$$
 and 
 $$\text{Average Precision @10} = \bar P_{10}:= \frac{1}{10} \cdot \sum_{i=1}^{10} P_i \in [0,1]$$
 
@@ -90,18 +90,20 @@ One disadvantage of this metric is that users have to be willing to fill out the
 In an ideal search engine, the user clicks the first result and realizes it's the website/book s/he is looking for; that's it. So there are two features: as few clicks as possible, and the clicked results should be at the top of the list.
 
 Therefore, we define
-$$
-  \text{Click Score for a Query j} = C_{j} :=
-    \begin{cases}
-      \frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1} & m > 0\text{ clicks have been made for this query j}\\
+
+$$\text{Click Score for a Query j} = C_{j} :=
+\begin{cases}
+      {\frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1} } & m > 0\text{ clicks have been made for this query j}\\
       0 & \text{no click has been made}
-    \end{cases}       
-$$
+    \end{cases}     $$
+
 where $p_i$ is the index (1-based) of the result of click $i$.
+We also define
 $$
 \text{Average Click Score} = \bar C := \frac{1}{N}\sum_{n=1}^{N}C_n \in [0,1]
 $$
-where $N$ is the total number of queries made during a period of time.
+as the final metric, where $N$ is the total number of queries made during a period of time.
+
 If for every single query, the user clicks and only clicks on the first result, this metric will be 1, indicating an ideal search engine.
 
 If for every single query, the user makes no click, or clicks on too many rear-located results , the metric would be very close to, if not equal to, 0, indicating a search engine that shows stochastic results. 
