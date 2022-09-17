@@ -169,7 +169,7 @@ Inspired by Google Search, we can add the exact search feature: when user put so
 
 ### 8.1 Typo Correction
 
-Our current search engine would not return the optimal results if we have some misspellings in the query. This problem is extremely serious when we search for author names: if we type `J K Rowling` as `J K Rolling` (that was my mistake when I tested my model :() the model, searching for an exact match of author names, simply does not display her books at the top of the list.
+Our current search engine would not return the optimal results if we have some misspellings in the query. This problem is extremely serious when we search for author names: if we type `J K Rowling` as `J K Rolling` (that was my mistake when I tested my model :upside_down_face:) the model, searching for an exact match of author names, simply does not display her books at the top of the list.
 
 Currently, Hugging Face has [this transformer](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-en) for typo detection. However, its problem is that it does not work well with people's names, nor would it return the inferred "correct" word or phrase based on the sentence context.
 
