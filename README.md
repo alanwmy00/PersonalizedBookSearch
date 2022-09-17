@@ -1,4 +1,4 @@
-# Personalized Book Search
+# Personalized Book Search Engine
 ### [Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb), [PDF Report](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/README.pdf)
 - **Author**: Minyang Wang
 - **Date**: Sept. 14, 2022
