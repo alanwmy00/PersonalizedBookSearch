@@ -108,7 +108,7 @@ When a user performs a search, we ask the user to give feedback on which of the 
 
 We can define 
 
-$$\text{Precision @} k = P_k := \frac{\text{number of results that meet expetaction from result 1 to k}}{k}$$
+$$\text{Precision @} k = P_k := \frac{\text{\\# of results that meet user's expetaction from result 1 to k}}{k}$$
 
 and then
 
