@@ -107,16 +107,11 @@ From the previous 4 parts, we get 4 values: `rating`, `sentence similarity score
 When a user performs a search, we ask the user to give feedback on which of the top 10 results meet their expetaction. 
 
 We can define 
-<<<<<<< HEAD
 
 $$\text{Precision @} k = P_k := \frac{\text{number of results that meet expetaction from result 1 to k}}{k}$$
 
 and then
 
-=======
-$$\text{Precision @} k = P_k := \frac{\text{number of results that meet expetaction from result 1 to k}}{k}$$
-and 
->>>>>>> e578a602dd2a18dd8355114d839f08a06f1e7095
 $$\text{Average Precision @10} = \bar P_{10}:= \frac{1}{10} \cdot \sum_{i=1}^{10} P_i \in [0,1]$$
 
 as the final metric.
@@ -139,6 +134,7 @@ Therefore, we define
   
      $$\text{Click Score for a Query j} = C_{j} :=
       \frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1}$$
+      
     where $p_i$ is the index (1-based) of the result of click $i$.
 
  - Else if no clicks have been made, then 
@@ -153,21 +149,6 @@ $$
 $$
 
 as our final metric, where $N$ is the total number of queries made during a period of time.
-=======
-
-$$\text{Click Score for a Query j} = C_{j} :=
-\begin{cases}
-      {\frac{1}{m} {\Sigma_{i=1}^{m}} {(i \cdot p_i)}^{-1} } & m > 0\text{ clicks have been made for this query j}\\
-      0 & \text{no click has been made}
-    \end{cases}$$
-
-where $p_i$ is the index (1-based) of the result of click $i$.
-We also define
-$$
-\text{Average Click Score} = \bar C := \frac{1}{N}\sum_{n=1}^{N}C_n \in [0,1]
-$$
-as the final metric, where $N$ is the total number of queries made during a period of time.
->>>>>>> e578a602dd2a18dd8355114d839f08a06f1e7095
 
 If for every single query, the user clicks and only clicks on the first result, this metric will be 1, indicating an ideal search engine.
 
@@ -215,6 +196,3 @@ Calculating all similarity scores and looking solely at exact matches are two en
 As I always do, when more fundamental knowledge on search engines and recommender systems has been gathered, in the fullness of time, at the appropriate juncture, when the moment is ripe, I will definitely come back to revisit this project and make necessary updates using newly-learned techniques!
 
 Any comments and/or suggestions to the current version are very much appreciated!
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
