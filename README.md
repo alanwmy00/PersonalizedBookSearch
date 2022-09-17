@@ -41,7 +41,7 @@ There are also 3 optional parameters. You may simply leave them untouched.
 - `to_read_boosting_factor`: the factor we multipy the final score with when the book is on the user's to-read list (further elaborated in [Section 5.4](#54-to-read-list)); defaults to 1.5;
 - `save_res`: whether to write search results to `.csv` under folder `saved_results`; defaults to `True`.
 
-**You may also take a look at `Demo.ipynb/html` for reference.**
+**You may also take a look at `Demo.ipynb` for reference.**
 
 ## 2. Problem Formulation
 
@@ -66,7 +66,7 @@ Thus, we need to train a Recommender System. One popular approach matrix factori
 
 We also saved the model weights to local.
 
-The Model can be found at `Recommender.py` and training can be found at `RecommderTraining.ipynb/html`.
+The Model can be found at `Recommender.py` and training can be found at `RecommderTraining.ipynb`.
 
 ### 5.2 Title Search & Multilingual Support: Sentence Similarity between Query Text and Book Titles
 
