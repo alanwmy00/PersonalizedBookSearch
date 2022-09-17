@@ -1,8 +1,8 @@
 # Personalized Book Search
-
+[Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb)
 - **Author**: Minyang Wang
 - **Date**: Sept. 14, 2022
-  
+
 ## Abstract
 For this project, we designed a book search engine with support for **book title search**, **book author search**, and **multilingual query and result**. The search result is tailored to each user, given their **past reading habits** and **to-read list**.
 
