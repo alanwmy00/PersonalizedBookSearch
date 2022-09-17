@@ -1,8 +1,8 @@
 # Personalized Book Search
-
+[Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb)
 - **Author**: Minyang Wang
 - **Date**: Sept. 14, 2022
-  
+
 ## Abstract
 For this project, we designed a book search engine with support for **book title search**, **book author search**, and **multilingual query and result**. The search result is tailored to each user, given their **past reading habits** and **to-read list**.
 
@@ -129,7 +129,6 @@ One disadvantage of this metric is that users have to be willing to fill out the
 In an ideal search engine, the user clicks the first result and realizes it's the website/book s/he is looking for; that's it. So there are two features: as few clicks as possible, and the clicked results should be at the top of the list.
 
 Therefore, we define
-<<<<<<< HEAD
  - If $m > 0$ clicks have been made during query j, then 
   
      $$\text{Click Score for a Query j} = C_{j} :=
