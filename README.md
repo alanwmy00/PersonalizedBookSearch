@@ -1,5 +1,5 @@
 # Personalized Book Search
-[Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb)
+### [Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb)
 - **Author**: Minyang Wang
 - **Date**: Sept. 14, 2022
 
