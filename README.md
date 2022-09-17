@@ -27,7 +27,7 @@ For this project, we designed a book search engine with support for **book title
   - [8. Other Things to Try](#8-other-things-to-try)
     - [8.1 Typo Correction](#81-typo-correction)
     - [8.2 Optimization - Research into New Algorithms for Book Search](#82-optimization---research-into-new-algorithms-for-book-search)
-  - [9. Afterwords](#9-afterwords)
+  - [9. Afterwords](#9-afterword)
 
 
 ## 1. Instructions on Running the Code
@@ -190,7 +190,7 @@ Nevertheless, I have noticed that some book search websites I frequently use suc
 Calculating all similarity scores and looking solely at exact matches are two ends of the extreme, and I will keep looking into this topic and try to find a new algorithm that is closer to the balance point.
 
 
-## 9. Afterwords
+## 9. Afterword
 
 As I always do, when more fundamental knowledge on search engines and recommender systems has been gathered, in the fullness of time, at the appropriate juncture, when the moment is ripe, I will definitely come back to revisit this project and make necessary updates using newly-learned techniques!
 
