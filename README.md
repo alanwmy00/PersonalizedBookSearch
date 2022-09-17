@@ -26,8 +26,8 @@ For this project, we designed a book search engine with support for **book title
     - [7.2 Exact Search](#72-exact-search)
   - [8. Other Things to Try](#8-other-things-to-try)
     - [8.1 Typo Correction](#81-typo-correction)
-    - [8.2 Optimization - Research into New Algorithms for Book Search](#82-optimization---research-into-new-algorithms-for-book-search)
-  - [9. Afterwords](#9-afterword)
+    - [8.2 Optimization: Research into New Algorithms for Book Search](#82-optimization-research-into-new-algorithms-for-book-search)
+  - [9. Afterword](#9-afterword)
 
 
 ## 1. Instructions on Running the Code
@@ -177,7 +177,7 @@ I have also looked into how Google handles this issue: Google uses Query Rank th
 
 We do not have any user interaction data so this is not applicable to our project; yet adding such a feature in the future would significantly improve user experience.
 
-### 8.2 Optimization - Research into New Algorithms for Book Search
+### 8.2 Optimization: Research into New Algorithms for Book Search
 
 Currently, one problem with our model is that it calculates the sentence similarity score between the query text and every single book title; with encoding and large-scale calculations, the transformer is infamously slow: it takes around 40 seconds for one query search on my 2019 8-GB RAM laptop (yes I know I should get a new one :sweat_smile:). 
 
