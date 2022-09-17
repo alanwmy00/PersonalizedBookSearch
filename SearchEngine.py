@@ -5,11 +5,6 @@ from sentence_transformers import SentenceTransformer, util
 import pickle
 import os
 
-import importlib
-
-importlib.reload(AP)
-importlib.reload(Recom)
-
 
 class SearchEngine:
     """
@@ -47,6 +42,7 @@ class SearchEngine:
         """
         assert int(user_id) == user_id and 0 < user_id <= 53424, "Please input a valid user-id: integer between 1 and" \
                                                                  " 53424 (inclusive)"
+        assert to_read_boosting_factor > 1, "Please enter a number > 1 for to_read_boosting_factor"
 
         res = pd.DataFrame()
         res["user_id"] = [user_id] * int(1e4)
@@ -55,10 +51,13 @@ class SearchEngine:
         res["to_read_boost"] = self.to_read_boost(user_id, to_read_boosting_factor)  # check if in user's to_read list
         res["rating"] = self.rs.predict(np.array(res.iloc[:, :2]))  # calculate user's rating of the books
         res["author_boost"] = self.author_boost(text)  # check if input contains any authors
+        res = res.merge(self.books_cleaned, left_on="book_id", right_on="book_id")  # merge to show book info
+        res["in_to_read_list"] = res.to_read_boost.apply(lambda a: a > 1) # add a col to show if in to-read
         res["final_score"] = res.similarity_score * res.to_read_boost * res.rating * res.author_boost  # final score
         res = res.sort_values("final_score", ascending=False)  # sort by final score
-        res = res.merge(self.books_cleaned, left_on="book_id", right_on="book_id")  # merge to show book info
-        res.drop(columns="user_id similarity_score to_read_boost rating author_boost".split(), inplace=True)
+        res = res.head(K)
+        res.index = range(K)
+        res.drop(columns="user_id to_read_boost similarity_score rating author_boost".split(), inplace=True)
 
         # Save to local
         if save_res:
@@ -66,9 +65,9 @@ class SearchEngine:
             if not os.path.exists(path):
                 os.makedirs(path)
             filename = f"{user_id} - {text}.csv"
-            res.head(K).to_csv(path + filename, index=False)
+            res.head(K).to_csv(path + filename)
 
-        return res.head(K)
+        return res
 
     def calculate_word_sim(self, targets, text):
         """

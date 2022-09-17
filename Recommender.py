@@ -90,5 +90,6 @@ def load_model(model_path):
         model = Recommender.load(model_path)
     except:
         raise Exception(f'''Error loading the trained {MODEL_NAME} model. 
-            Do you have the right trained model in path: {model_path}?''')
+            Did you accidentally delete the model? Please redownload
+            the zip file. Or you can run RecommderTraining.ipynb.''')
     return model
