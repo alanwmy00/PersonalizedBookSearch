@@ -26,6 +26,9 @@ class SearchEngine:
         self.books_cleaned = pd.read_csv("goodbooks-10k/books_cleaned.csv")
         self.to_read = pd.read_csv("goodbooks-10k/to_read.csv")
 
+        with open('model/embeddings.pkl', "rb") as fIn:
+            self.embedding_1 = pickle.load(fIn)
+
     def query(self, user_id, text, to_read_boosting_factor=1.5, K=20, save_res=True):
         """
         Main function of the class, given a user_id, query, we return the top books recommended
@@ -47,7 +50,7 @@ class SearchEngine:
         res = pd.DataFrame()
         res["user_id"] = [user_id] * int(1e4)
         res["book_id"] = self.books_cleaned["book_id"]
-        res["similarity_score"] = self.calculate_word_sim(self.books_cleaned.title, text)  # calculate similarity score
+        res["similarity_score"] = self.calculate_word_sim(text)  # calculate similarity score
         res["to_read_boost"] = self.to_read_boost(user_id, to_read_boosting_factor)  # check if in user's to_read list
         res["rating"] = self.rs.predict(np.array(res.iloc[:, :2]))  # calculate user's rating of the books
         res["author_boost"] = self.author_boost(text)  # check if input contains any authors
@@ -69,7 +72,7 @@ class SearchEngine:
 
         return res
 
-    def calculate_word_sim(self, targets, text):
+    def calculate_word_sim(self,text):
         """
         Calculate word similarity score
 
@@ -83,9 +86,8 @@ class SearchEngine:
         if text == "":
             return [0.05] * 10_000
 
-        embedding_1 = self.sen_model.encode(np.array(targets), convert_to_tensor=True)
         embedding_2 = self.sen_model.encode(text, convert_to_tensor=True)
-        res = util.pytorch_cos_sim(embedding_1, embedding_2)
+        res = util.pytorch_cos_sim(self.embedding_1, embedding_2)
         return np.maximum(res.numpy().reshape(-1), 0.05)
 
     def to_read_boost(self, user_id, to_read_boost):

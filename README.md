@@ -189,6 +189,10 @@ Nevertheless, I have noticed that some book search websites I frequently use suc
 
 Calculating all similarity scores and looking solely at exact matches are two ends of the extreme, and I will keep looking into this topic and try to find a new algorithm that is closer to the balance point.
 
+> __Note__ 
+> 9/23/2022
+> 
+> Previously, I didn't save the embeddings to local, causing a 30+ second waiting time for every single query. The problem is fixed now.
 
 ## 9. Afterword
 
