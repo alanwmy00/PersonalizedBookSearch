@@ -1,5 +1,6 @@
-/html
-
+/local
+/__pycache__
+/.idea
 *.kate-swp
 
 # Byte-compiled / optimized / DLL files

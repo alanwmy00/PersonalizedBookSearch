@@ -3,6 +3,9 @@
 - **Author**: [Alan Wang](https://www.linkedin.com/in/alanwmy00/)
 - **Date**: Sept. 14, 2022
 
+## Update 9/23/2022
+Previously, I didn't save the word embeddings to local, causing a 30+ second waiting time for every single query. The problem is fixed now.
+
 ## Abstract
 For this project, we designed a book search engine with support for **book title search**, **book author search**, and **multilingual query and result**. The search result is tailored to each user, given their **past reading habits** and **to-read list**.
 
