@@ -37,7 +37,7 @@ For this project, we designed a book search engine with support for **book title
 
 Create a Python virtual environment, activate it, and install the requirements. 
 
-Go to `main.py`, modify `user_id` (line 11) and `query` (line 12) to interested. Run the script (it might take around 30 seconds).
+Go to `main.py`, modify `user_id` (line 11) and `query` (line 12) to interested. Run the script.
 
 There are also 3 optional parameters. You may simply leave them untouched.
 - `K`: the number of book-search results retrieving; defaults to 20; 
