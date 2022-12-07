@@ -16,7 +16,7 @@ For this project, we designed a book search engine with support for **book title
   - [3. Goals](#3-goals)
   - [4. Non-Goals](#4-non-goals)
   - [5. Features and Modeling](#5-features-and-modeling)
-    - [5.1 Past Rating - SVM](#51-past-rating---svm)
+    - [5.1 Past Rating - SVD](#51-past-rating---svd)
     - [5.2 Title Search & Multilingual Support: Sentence Similarity between Query Text and Book Titles](#52-title-search--multilingual-support-sentence-similarity-between-query-text-and-book-titles)
     - [5.3 Author Search: Inverted Search Engine](#53-author-search-inverted-search-engine)
     - [5.4 To-Read List](#54-to-read-list)
@@ -61,7 +61,7 @@ We want to build a book search engine that returns relevant books given a piece 
 
 ## 5. Features and Modeling
 
-### 5.1 Past Rating - SVM
+### 5.1 Past Rating - SVD
 
 To make the search results personalized, we need to predict the rating of a user given a new book. 
 
