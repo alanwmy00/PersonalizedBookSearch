@@ -10,7 +10,6 @@ Previously, I didn't save the word embeddings to local, causing a 30+ second wai
 For this project, we designed a book search engine with support for **book title search**, **book author search**, and **multilingual query and result**. The search result is tailored to each user, given their **past reading habits** and **to-read list**.
 
 ## Table of Contents
-  - [Abstract](#abstract)
   - [1. Instructions on Running the Code](#1-instructions-on-running-the-code)
   - [2. Problem Formulation](#2-problem-formulation)
   - [3. Goals](#3-goals)
