@@ -1,5 +1,5 @@
 # Personalized Book Search Engine
-### [Demo](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/Demo.ipynb), [PDF Report](https://github.com/alanwmy00/PersonalizedBookSearch/blob/main/README.pdf)
+### [Demo](https://github.com/alanwmy00/PersonalizedBookSearch/tree/main/archive/Demo.ipynb), [PDF Report](https://github.com/alanwmy00/PersonalizedBookSearch/tree/main/archive/README.pdf)
 - **Author**: [Alan Wang](https://www.linkedin.com/in/alanwmy00/)
 - **Date**: Sept. 14, 2022
 

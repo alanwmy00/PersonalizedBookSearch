@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 search_eng = SE.SearchEngine()
 
 user_id = 907
-query = "i love you"
+query = "Xu Tianhui"
 save_res = True
 
 if __name__ == "__main__":

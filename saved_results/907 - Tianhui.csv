@@ -1,0 +1,21 @@
+,book_id,authors,title,isbn13,in_to_read_list,final_score
+0,825,Lisa See,Shanghai Girls,9781400067110.0,False,2.248425272681048
+1,3000,Terry Pratchett,Jingo,9780552154160.0,False,2.2159646094062677
+2,7120,"Liu Cixin, Joel Martinsen",黑暗森林,9780765377080.0,False,2.102011838181452
+3,1099,"Lao Tzu, Gia-Fu Feng, Jane English, Chungliang Al Huang, Rowena Pattee Kryder, Toinette Lippe",道德經 [dào dé jīng],9780679776190.0,False,1.9884595057533216
+4,1168,"Benjamin Hoff, Ernest H. Shepard",The Tao of Pooh,9781405204260.0,False,1.937209768301935
+5,5233,Kevin Kwan,China Rich Girlfriend,9780385539080.0,False,1.9160785692520461
+6,8729,Melanie Rawn,Dragon Prince,9780756403010.0,False,1.9015069056513143
+7,2942,James Clavell,Tai-Pan,9780440184620.0,False,1.8845335478522138
+8,2676,"Liu Cixin, Ken Liu",三体,9780765377070.0,False,1.8769865695456505
+9,2783,Tamora Pierce,"Emperor Mage (Immortals, #3)",9781416903380.0,False,1.8476826813742346
+10,6003,"Claire Huchet Bishop, Kurt Wiese",The Five Chinese Brothers,9780698113570.0,False,1.8430119279899018
+11,7173,"Eiji Yoshikawa, Charles Terry, Edwin O. Reischauer",宮本武蔵 Miyamoto Musashi,9784770019580.0,False,1.752054881327396
+12,6613,"Paul Hattaway, Brother Yun",The Heavenly Man: The Remarkable True Story of Chinese Christian Brother Yun,9780825462080.0,False,1.730965463571663
+13,649,"Haruki Murakami, Jay Rubin, Philip Gabriel",いちきゅうはちよん [Ichi-Kyū-Hachi-Yon],9780307593310.0,True,1.724031791211909
+14,2540,Gene Luen Yang,American Born Chinese,9781596431520.0,False,1.698450127330334
+15,6576,Yoshihiro Togashi,Yu Yu Hakusho,9781569319050.0,False,1.6913837119460282
+16,7900,Katherine Addison,The Goblin Emperor,9780765327000.0,False,1.691127080613606
+17,9801,Danielle Steel,Zoya,9789875661610.0,False,1.6361669391706142
+18,7368,C.S. Pacat,Prince's Gambit,,False,1.6331996422248933
+19,3682,Mitchell Zuckoff,Lost in Shangri-la,9780061988350.0,False,1.611610136988316
