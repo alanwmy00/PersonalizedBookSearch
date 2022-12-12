@@ -134,9 +134,7 @@ In an ideal search engine, the user clicks the first result and realizes it's th
 Therefore, we define
  - If $m > 0$ clicks have been made during query j, then 
   
-     $$\text{Click Score for a Query j} = C_{j} :=
-      \frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1}$$
-      
+     $$\text{Click Score for a Query j} = C_{j} := \frac{1}{m} \sum_{i=1}^m {(i \cdot p_i)}^{-1}$$
     where $p_i$ is the index (1-based) of the result of click $i$.
 
  - Else if no clicks have been made, then 
